@@ -3,7 +3,7 @@
 A small, dependency-free tool to build clean and consistent UTM campaign links.
 Everything runs in the browser: no sign-up, no server, no tracking.
 
-**Live demo:** https://francescaericacerza-dotcom.github.io/utm-link-builder/
+**Live demo:** https://francescacerza.github.io/utm-link-builder/
 
 ![UTM Link Builder screenshot](screenshot.png)
 
