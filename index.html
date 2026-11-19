@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UTM Link Builder</title>
+  <meta name="description" content="Build clean, consistent UTM campaign links in seconds. No sign-up, no tracking, runs in your browser.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>UTM Link Builder</h1>
+    <p class="intro">Build consistent campaign links. Everything runs in your browser; nothing is sent anywhere.</p>
+
+    <form id="utm-form" novalidate>
+      <label for="url">Website URL <span class="req">*</span></label>
+      <input id="url" name="url" type="text" placeholder="https://example.com/landing-page" autocomplete="off">
+
+      <div class="row">
+        <div>
+          <label for="source">Source <span class="req">*</span></label>
+          <input id="source" name="source" list="sources" placeholder="linkedin" autocomplete="off">
+          <datalist id="sources">
+            <option value="linkedin"></option>
+            <option value="instagram"></option>
+            <option value="facebook"></option>
+            <option value="newsletter"></option>
+            <option value="google"></option>
+          </datalist>
+        </div>
+        <div>
+          <label for="medium">Medium <span class="req">*</span></label>
+          <input id="medium" name="medium" list="mediums" placeholder="social" autocomplete="off">
+          <datalist id="mediums">
+            <option value="social"></option>
+            <option value="email"></option>
+            <option value="cpc"></option>
+            <option value="referral"></option>
+            <option value="qr"></option>
+          </datalist>
+        </div>
+      </div>
+
+      <label for="campaign">Campaign <span class="req">*</span></label>
+      <input id="campaign" name="campaign" placeholder="spring-launch-2027" autocomplete="off">
+
+      <div class="row">
+        <div>
+          <label for="term">Term <span class="opt">(optional)</span></label>
+          <input id="term" name="term" placeholder="keyword" autocomplete="off">
+        </div>
+        <div>
+          <label for="content">Content <span class="opt">(optional)</span></label>
+          <input id="content" name="content" placeholder="carousel-v2" autocomplete="off">
+        </div>
+      </div>
+
+      <label class="check">
+        <input id="normalize" type="checkbox" checked>
+        Clean values (lowercase, spaces become hyphens)
+      </label>
+
+      <div class="actions">
+        <button type="submit" class="primary">Build link</button>
+        <button type="reset" id="reset" class="secondary">Clear</button>
+      </div>
+    </form>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <section id="result" hidden aria-live="polite">
+      <h2>Your link</h2>
+      <textarea id="output" readonly rows="3"></textarea>
+      <button type="button" id="copy" class="primary">Copy link</button>
+      <span id="copied" class="copied" hidden>Copied!</span>
+    </section>
+
+    <section id="history-section" hidden>
+      <h2>Recent links <button type="button" id="clear-history" class="link">Clear history</button></h2>
+      <ul id="history"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
