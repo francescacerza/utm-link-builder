@@ -5,6 +5,8 @@ Everything runs in the browser: no sign-up, no server, no tracking.
 
 **Live demo:** https://francescaericacerza-dotcom.github.io/utm-link-builder/
 
+![UTM Link Builder screenshot](screenshot.png)
+
 ## Features
 
 - Builds links with `utm_source`, `utm_medium`, `utm_campaign` (required) and `utm_term`, `utm_content` (optional)
